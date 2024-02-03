@@ -44,20 +44,23 @@ int main()
             cout << "Your order was too large to be filled." << endl;
         }
         else{
+            barInventorySmall -= smBarsNeeded;
+            barInventoryMedium -= mdBarsNeeded;
+            barInventoryLarge -= lgBarsNeeded;
             double totalSmallBarCost = smBarsNeeded * barCostSmall;
             double totalMediumBarCost = mdBarsNeeded * barCostMedium;
             double totalLargeBarCost = lgBarsNeeded * barCostLarge;
             double total = totalSmallBarCost + totalMediumBarCost + totalLargeBarCost;
             cout << "Your order has been filled:" << endl;
-            cout << setw(12) << "Small bars:" << setw(4) << smBarsNeeded << " =" << setw(8) << fixed << setprecision(2) << totalSmallBarCost << endl;
-            cout << setw(12) << "Medium bars:" << setw(4) << mdBarsNeeded << " =" << setw(8) << totalMediumBarCost << endl;
-            cout << setw(12) << "Large bars:" << setw(4) << lgBarsNeeded << " =" << setw(8) << totalLargeBarCost << endl;
-            cout << "Total cost: " << setw(14) << total << endl;
+            cout << setw(12) << "Small bars:" << setw(4) << smBarsNeeded << " =" << setw(9) << fixed << setprecision(2) << totalSmallBarCost << endl;
+            cout << setw(12) << "Medium bars:" << setw(4) << mdBarsNeeded << " =" << setw(9) << totalMediumBarCost << endl;
+            cout << setw(12) << "Large bars:" << setw(4) << lgBarsNeeded << " =" << setw(9) << totalLargeBarCost << endl;
+            cout << "Total cost: " << setw(15) << total << endl;
             cout << endl;
             cout << "Remaining Inventory:" << endl;
-            cout << setw(12) << "Small bars" << ':' << setw(5) << barInventorySmall << endl;
-            cout << setw(12) << "Medium bars" << ':' << setw(5) << barInventoryMedium << endl;
-            cout << setw(12) << "Large bars" << ':' << setw(5) << barInventoryLarge << endl;
+            cout << setw(12) << "Small bars" << ':' << setw(6) << barInventorySmall << endl;
+            cout << setw(12) << "Medium bars" << ':' << setw(6) << barInventoryMedium << endl;
+            cout << setw(12) << "Large bars" << ':' << setw(6) << barInventoryLarge << endl;
             cout << endl;
             cout << endl;
         }
