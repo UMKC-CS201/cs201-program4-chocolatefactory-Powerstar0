@@ -64,8 +64,8 @@ int main()
     char userInput = 'Y';
     int userPounds;
     cout << "WELCOME TO MY CHOCOLATE FACTORY" << endl;
-    // Main Loop while userInput == 'Y'
-    while (userInput == 'Y'){
+    // Main Loop while userInput == 'Y' or 'y'
+    while ((userInput == 'Y') or (userInput == 'y')){
         // Asks User for pounds of chocolate and assigns it to userPounds
         cout << "Enter total number of pounds of chocolate you would like: ";
         cin >> userPounds;
